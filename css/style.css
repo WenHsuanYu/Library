@@ -29,6 +29,12 @@ caption {
     font-size: 1.5rem;
 }
 
+.table {
+  width:100%;
+  display:flex;
+  justify-content: center;
+}
+
 .booktable {
     width:70%;
     color:black;

@@ -4,58 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="./css/style.css">
+    
 </head>
 <body>
   <h1>Library</h1>
-  <main id="table">
-    <table>
-      <caption>Display every book in the library</caption>
-      <thead>
-        <tr>
-          <th>Title</th>
-          <th>Author</th>
-          <th>Pages</th>
-          <th>Read Status</th>
-          <th></th>
-          <th></th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        <td>Data1</td>
-        <td>Data2</td>
-        <td>Data3</td>
-        <td>Data4</td>
-        <td><button>toggle read status</button></td>
-        <td><button>Edit</button></td>
-        <td><button>Delete</button></td>
-      </tbody>
-    </table>
+  <main class="content">
+    <div class="table">
+      <table class="booktable">
+        <caption>Display every book in the library</caption>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Pages</th>
+            <th>Read Status</th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <td>Data1</td>
+          <td>Data2</td>
+          <td>Data3</td>
+          <td>Data4</td>
+          <td><button>toggle read status</button></td>
+          <td><button>Edit</button></td>
+          <td><button>Delete</button></td>
+        </tbody>
+      </table>
+    </div>
+  
+    <div><button class="newbook">Add a book</button></div>
+    <div class="form hidden">
+      <h2>Adding/Editing a book</h2>
+      <form>
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" placeholder="Title">
+        <label for="author">Author</label>
+        <input type="text" id="author" name="author" placeholder="author">
+        <label for="pages">Pages</label>
+        <input type="number" id="pages" name="pages" placeholder="pages" min="0">
+        <fieldset>
+          <legend>Reading book?</legend>
+          <div>
+            <input type="radio" id="yes" name="read" value="yes" checked>
+            <label for="yes">Yes</label>
+          </div>
+          <div>
+            <input type="radio" id="no" name="read" value="no">
+            <label for="no">No</label>
+          </div>
+        </fieldset>
+      </form>
+      <div class="btn-section">
+          <button type="submit" id="submit">Submit</button>
+          <button type="button" id="return">Return</button>
+        </div>
+    </div>
   </main>
-  <div><button>Add a book</button></div>
-  <div class="form hidden">
-    <h2>Adding/Editing a book</h2>
-    <form>
-      <label for="title">Title</label>
-      <input type="text" id="title" name="title" placeholder="Title">
-      <label for="author">Author</label>
-      <input type="text" id="author" name="author" placeholder="author">
-      <label for="pages">Pages</label>
-      <input type="number" id="pages" name="pages" placeholder="pages" min="0">
-      <fieldset>
-        <legend>Reading book?</legend>
-        <div>
-          <input type="radio" id="yes" name="read" value="yes" checked>
-          <label for="yes">Yes</label>
-        </div>
-        <div>
-          <input type="radio" id="no" name="read" value="no">
-          <label for="no">No</label>
-        </div>
-      </fieldset>
-      <button type="submit" id="submit">Submit</button>
-      <button type="button" id="return">Return</button>
-    </form>
-  </div>
 </body>
 </html>
